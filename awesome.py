@@ -12,7 +12,7 @@ client_secrets = json.loads(client_secrets_content)
 flow = InstalledAppFlow.from_client_config(
     client_secrets,
     scopes=['https://www.googleapis.com/auth/youtube.readonly'])
-flow.run_local_server(port=8080, prompt="consent")
+auth_url, _ = flow.authorization_url(prompt="consent")
 credentials = flow.credentials
 
 youtube = build('youtube', 'v3', credentials=credentials)
