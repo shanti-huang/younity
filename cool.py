@@ -10,12 +10,12 @@ videos = []
 client_secrets_content = '''
 {
   "installed": {
-    "client_id": "308150010887-bfe4gbic2emcpob654p7lhnnvkk31lir.apps.googleusercontent.com",
-    "project_id": "blues-hacks-2025",
+    "client_id": "YOUR_CLIENT_ID",
+    "project_id": "YOUR_PROJECT_ID",
     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
     "token_uri": "https://oauth2.googleapis.com/token",
     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_secret": "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",
+    "client_secret": "YOUR_CLIENT_SECRET",
     "redirect_uris": ["http://localhost:8080/"]
   }
 }
@@ -56,9 +56,7 @@ def getlikedvideos():
 getlikedvideos()
 
 client = Groq(
-    #api_key=os.getenv("GROQ_API_KEY"),
-    api_key="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"
-
+    api_key=YOUR_API_KEY
 )
 
 volunteer_opportunities = [{
