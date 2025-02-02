@@ -1,3 +1,4 @@
+#In order to hide api keys and sensitive information, this code doesn't work unless you get your own client id, project id, client secret and groq api key
 import os
 import json
 from groq import Groq
